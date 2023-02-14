@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pallindrome</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: url('pl.jpg');
+            background-repeat: no-repeat;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 20%;
+          margin-left: 25%;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="margin-left: 17%;height: 12px; letter-spacing: 12px;">Pallindrome checker</h1>
+        <button onclick="Pallindrome()" style="width: 290px; height: 46px;
+        margin-left: 25%;margin-top: 25px;">Click To Check</button>
+
+        <p id="demo" style="margin-left:213px; margin-top: 75px;letter-spacing: 10px; font-size: 2rem;color: blue;"></p>
+    </div>
+    
+   
+
+    <script>
+           function Pallindrome(){
+             let result  = prompt("Please Enter To Checked")
+             let start =0;
+             let end = result.length-1;
+             let ans = 'The number is pallindrome';
+
+             while(end > start){
+                if(result[start]!=result[end])
+                {
+                    ans = 'The Number is not pallindrom';
+                }
+                start++;
+                end--;
+             }
+            // return ans;
+            document.getElementById("demo").innerHTML = ans;
+           }
+           
+    </script>
+</body>
+</html>
